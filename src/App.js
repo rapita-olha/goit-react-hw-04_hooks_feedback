@@ -46,7 +46,6 @@ export default function App() {
   };
 
   const countPositiveFeedbackPercentage = () => {
-    // return Math.round((good * 100) / (good + neutral + bad));
     return Math.round((good * 100) / countTotalFeedback());
   };
 
@@ -65,7 +64,6 @@ export default function App() {
           <Notification message="No feedback given" />
         ) : (
           <Statistics
-            // поднятие состояния-от родителя вниз детей кидаются пропсы
             good={good}
             neutral={neutral}
             bad={bad}
@@ -77,7 +75,3 @@ export default function App() {
     </div>
   );
 }
-
-// ---------------------------------------------------
-// onClick={this.setActiveIdx(index)}-на это место будет возвращаен вызов функции-результат- те вернет undefind
-// onClick={() => this.setActiveIdx(index)}-вернут ссылку на функцию с индеком
